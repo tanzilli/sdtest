@@ -5,7 +5,7 @@ obj-m       := hrt_stress.o
 
 else
 PWD  := $(shell pwd)
-KDIR ?= $(PWD)/../linux-2.6.32.2/
+KDIR ?= $(PWD)/../linux-2.6.38/
 
 modules:
 	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules

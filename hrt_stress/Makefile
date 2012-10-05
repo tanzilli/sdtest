@@ -1,0 +1,17 @@
+CROSS_COMPILE=arm-linux-gnueabi-
+
+ifneq ($(KERNELRELEASE),)
+obj-m       := hrt_stress.o
+
+else
+PWD  := $(shell pwd)
+KDIR ?= $(PWD)/../linux-2.6.32.2/
+
+modules:
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+clean:
+	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions modules.order Module.symvers
+
+.PHONY: modules clean
+
+endif

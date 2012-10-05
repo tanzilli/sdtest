@@ -8,11 +8,10 @@ and generate a lot of interrupts.
 Sintax:
 
 <pre>
-debarm:~# insmod hrt_stress.ko frequency=500000
-HRT stress test initializing.
-Clock resolution is 1ns
-Frequency for timer interrupts: 500000Hz.
-Starting timer to fire every 2000ns
-HRT stress test initialized.
-hrtimer: interrupt took 47300 ns
+debarm:~/sdtest# insmod hrt_stress.ko frequency=10000                           
+HRT stress test initializing.                                                   
+Clock resolution is 1ns                                                         
+Frequency for timer interrupts: 10000Hz.                                        
+Starting timer to fire every 100000ns                                           
+HRT stress test initialized. 
 </pre>

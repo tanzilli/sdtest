@@ -40,7 +40,7 @@ int value=0;
 
 enum hrtimer_restart hrt_callback(struct hrtimer *timer){
   value=1-value;
-  __gpio_set_value(80,value); //toggle pin J7.3 (PB18)
+  __gpio_set_value(80,value); //toggle pin J7.5 (PB16)
   hrtimer_forward(&hr_timer, ktime_get(), interval);
   return HRTIMER_RESTART;
 }
